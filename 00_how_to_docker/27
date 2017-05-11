@@ -1,0 +1,1 @@
+docker logs -f $(docker ps --filter 'name=engineering-bay' -l -q)
