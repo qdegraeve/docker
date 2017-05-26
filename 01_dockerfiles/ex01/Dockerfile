@@ -13,8 +13,6 @@ RUN apt-get update \
 
 ADD http://dl.4players.de/ts/releases/3.0.13.6/teamspeak3-server_linux_amd64-${TS_VERSION}.tar.bz2 /data
 
-COPY start_server.sh /start_server
-
 RUN cd /data \
 	&& tar -xvf teamspeak3-server_linux_amd64-${TS_VERSION}.tar.bz2 --strip-components=1 \
 	&& rm -rf teamspeak3-server_linux_amd64-${TS_VERSION}.tar.bz2
